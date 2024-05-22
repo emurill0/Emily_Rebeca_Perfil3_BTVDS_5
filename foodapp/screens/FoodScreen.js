@@ -1,3 +1,4 @@
+// FoodScreen.js
 import React from 'react';
 import { View, Text, Image, StyleSheet, FlatList } from 'react-native';
 
@@ -16,7 +17,6 @@ const FoodScreen = () => {
             <Image source={{ uri: item.photo }} style={styles.photo} />
             <Text style={styles.name}>{item.name}</Text>
             <Text style={styles.description}>{item.description}</Text>
-            <Card photo={item.photo} name={item.name} description={item.description} />
         </View>
     );
 

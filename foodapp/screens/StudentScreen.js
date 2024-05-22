@@ -1,9 +1,10 @@
+// StudentScreen.js
 import React from 'react';
 import { View, Text, Image, StyleSheet, FlatList } from 'react-native';
 
 const students = [
-  { id: '1', name: 'Emily Murillo', carnet: '20220021', photo: '../assets/emi.jpeg' },
-  { id: '2', name: 'María López', carnet: '20220151', photo: '../assets/rebekita.jpeg' }
+  { id: '1', name: 'Emily Murillo', carnet: '20220021', photo: './assets/emi.jpeg' },
+  { id: '2', name: 'Rebeca Monico', carnet: '20220151', photo: './assets/rebekita.jpeg' }
 ];
 
 const StudentScreen = () => {
@@ -12,10 +13,10 @@ const StudentScreen = () => {
       <Image source={{ uri: item.photo }} style={styles.photo} />
       <Text style={styles.name}>{item.name}</Text>
       <Text style={styles.carnet}>{item.carnet}</Text>
-      <Card photo={item.photo} name={item.name} description={item.carnet} />
     </View>
   );
 
+  
   return (
     <FlatList
       data={students}
